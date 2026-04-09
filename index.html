@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>VoltChat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="login">
+  <h2>VoltChat Login</h2>
+  <input id="username" placeholder="Username">
+  <input id="password" type="password" placeholder="Password">
+  <button onclick="login()">Enter</button>
+</div>
+
+<div id="app" class="hidden">
+
+  <div class="sidebar">
+    <h3 id="me"></h3>
+
+    <input id="friendInput" placeholder="Add friend">
+    <button onclick="addFriend()">Add</button>
+
+    <h4>Friends</h4>
+    <div id="friends"></div>
+
+    <button onclick="joinGlobal()">🌍 Global Chat</button>
+  </div>
+
+  <div class="chat">
+    <div id="messages"></div>
+
+    <div class="controls">
+      <button onclick="startCall()">📞 Call</button>
+    </div>
+
+    <input id="msg" placeholder="Message...">
+    <button onclick="send()">Send</button>
+  </div>
+
+</div>
+
+<video id="localVideo" autoplay muted></video>
+<video id="remoteVideo" autoplay></video>
+
+<script src="app.js"></script>
+</body>
+</html>
